@@ -1,8 +1,9 @@
 .flashcard {
-  width: 280px;
-  height: 280px;
+  min-width: 280px;
+  min-height: 280px;
+  max-width: 280px;
+  max-height: 280px;
 
-  display: inline-block;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -12,8 +13,12 @@
 
 .flashcard-wrapper {
   perspective: 1000px;
-  width: 280px;
-  height: 280px;
+  min-width: 280px;
+  min-height: 280px;
+  max-width: 280px;
+  max-height: 280px;
+  display: inline-block;
+  margin: 0 0 35px 0;
 }
 
 .flipper {

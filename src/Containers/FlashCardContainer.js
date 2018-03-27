@@ -12,8 +12,6 @@ class FlashCardContainer extends Component {
   }
 
   handleClick = () => {
-    console.log('CLICKED!');
-
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
   };
 

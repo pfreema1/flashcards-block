@@ -15,9 +15,10 @@ class FlashCardBlockContainer extends Component {
     const { vocabArr } = this.state;
 
     return (
-      <div>
-        {vocabArr.map(vocabEl => (
+      <div className="flashcard-block__wrapper">
+        {vocabArr.map((vocabEl, index) => (
           <FlashCardContainer
+            key={index}
             front={vocabEl.keyWord}
             back={vocabEl.definition}
           />
