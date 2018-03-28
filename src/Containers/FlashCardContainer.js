@@ -39,7 +39,8 @@ class FlashCardContainer extends Component {
   handleKeyDown = e => {
     if (e.key === 'Enter' || e.key === ' ') {
       this.handleClick();
-      this.backEl.focus();
+      this.backEl && this.backEl.focus();
+      // this.backEl.focus();
     }
   };
 

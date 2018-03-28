@@ -23,6 +23,11 @@
   cursor: pointer;
 }
 
+.flashcard-wrapper:active,
+.flashcard-wrapper:hover {
+  outline: none;
+}
+
 .flipper {
   transform: rotateY(180deg) scale(1.1) translate3d(0, -10px, 0);
   transition: all 0.7s cubic-bezier(0.6, 0, 0.4, 1);
@@ -143,6 +148,11 @@
   overflow: scroll;
   box-sizing: border-box;
   opacity: 1;
+}
+
+.flashcard__back--scroll:hover,
+.flashcard__back--scroll:active {
+  outline: none;
 }
 
 .flashcard__image {

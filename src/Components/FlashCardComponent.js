@@ -18,8 +18,6 @@ const FlashCardComponent = ({
       onClick={handleClick}
       className="flashcard-wrapper"
       tabIndex={index + 1}
-      // role="button"
-      // aria-pressed={isFlipped}
       onKeyDown={handleKeyDown}
     >
       <div className={isFlipped ? 'flipper' : 'unflip'}>
