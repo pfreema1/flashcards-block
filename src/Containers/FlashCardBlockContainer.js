@@ -21,7 +21,7 @@ class FlashCardBlockContainer extends Component {
           {vocabArr.map((vocabEl, index) => (
             <FlashCardContainer
               key={index}
-              front={vocabEl.keyWord}
+              frontContent={vocabEl.keyWord}
               backText={vocabEl.definition}
               backImage={vocabEl.image}
               index={index}

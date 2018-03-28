@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FlashCardComponent = ({
-  front,
+  frontContent,
   backText,
   backImage,
   handleClick,
@@ -24,7 +24,7 @@ const FlashCardComponent = ({
     >
       <div className={isFlipped ? 'flipper' : 'unflip'}>
         <div className="flashcard flashcard__front">
-          {front}
+          {frontContent}
           {index === 0 && (
             <div className="flashcard__ui-instruction">Click to flip</div>
           )}

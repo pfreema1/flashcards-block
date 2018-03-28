@@ -1,8 +1,6 @@
 .flashcard-block__wrapper {
   max-width: 102rem;
-
   margin: 30px auto 30px auto;
-
   display: flex;
   justify-content: center;
   align-items: center;

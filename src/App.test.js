@@ -5,8 +5,6 @@ import Enzyme from 'enzyme';
 import { shallow, mount, render } from 'enzyme';
 import exampleData from './Data';
 import Adapter from 'enzyme-adapter-react-16';
-import sinon from 'sinon';
-import FlashCardContainer from './Containers/FlashCardContainer';
 import FlashCardBlockContainer from './Containers/FlashCardBlockContainer';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -17,12 +15,11 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-describe('<FlashCardContainer />', () => {
+describe('<FlashCardBlockContainer />', () => {
   const wrapper = mount(<FlashCardBlockContainer data={exampleData} />);
 
   it('renders correct amount of flash cards', () => {
     const numOfCardsInData = exampleData.vocab.length;
-
     expect(wrapper.find('.flashcard-wrapper').length).toBe(numOfCardsInData);
   });
 
@@ -35,7 +32,6 @@ describe('<FlashCardContainer />', () => {
 
   it('card starts with unflip class', () => {
     wrapper.find('.flashcard-wrapper').forEach(node => {
-      // console.log(node.childAt(0).hasClass('unflip'));
       expect(node.childAt(0).hasClass('unflip')).toBe(true);
     });
   });

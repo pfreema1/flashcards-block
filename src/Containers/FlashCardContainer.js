@@ -61,13 +61,13 @@ class FlashCardContainer extends Component {
   };
 
   render() {
-    const { front, backText, backImage, index } = this.props;
+    const { frontContent, backText, backImage, index } = this.props;
     const { isFlipped, hasScrollBar, isScrolledToBottom } = this.state;
 
     return (
       <FlashCardComponent
         handleClick={this.handleClick}
-        front={front}
+        frontContent={frontContent}
         backText={backText}
         isFlipped={isFlipped}
         backImage={backImage}
