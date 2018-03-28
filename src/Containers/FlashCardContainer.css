@@ -50,7 +50,7 @@
 .flashcard--front {
   z-index: 2;
   transform: rotateY(0deg);
-  /* border-top: 3px solid #747a7e; */
+  border-top: none;
   /* box-shadow: 0 -3px 0 0 red; */
   font-size: 29px;
   font-weight: 300;
@@ -79,7 +79,7 @@
   box-sizing: border-box;
 }
 
-.foo {
+.flashcard__fadeout-wrapper {
   position: relative;
   height: 280px;
   width: 280px;
@@ -113,7 +113,7 @@
   );
 }
 
-.back-text {
+.flashcard__back-text {
   /* margin: 25px; */
   width: 100%;
   height: 100%;
