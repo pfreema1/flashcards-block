@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FlashCardBlockContainer from './Containers/FlashCardBlockContainer';
-import './App.css';
 import exampleData from './Data';
 
 class App extends Component {
