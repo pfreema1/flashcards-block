@@ -1,15 +1,14 @@
 .flashcard {
-  /* min-width: 0;
-  min-height: 0; */
-
+  min-width: 280px;
+  min-height: 280px;
   max-width: 280px;
   max-height: 280px;
-  width: 280px;
-  height: 280px;
+
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 .flashcard-wrapper {
@@ -18,28 +17,25 @@
   min-height: 280px;
   max-width: 280px;
   max-height: 280px;
-
   display: inline-block;
-  margin: 0 15px 35px 15px;
-  -webkit-transform: translate3d(0, 0, 0);
+  margin: 0 0px 35px 0px;
+  transform: scale(0.9);
 }
 
 .flipper {
   transform: rotateY(180deg) scale(1.1) translate3d(0, -10px, 0);
-  transition: all 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+  transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
   opacity: 1;
-  will-change: transform;
 }
 
 .unflip {
-  transform: rotateY(0deg) translate3d(0, 0, 0);
-  transition: all 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+  transform: rotateY(0deg);
+  transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
   opacity: 1;
-  will-change: transform;
 }
 
 .flashcard__front,
@@ -61,7 +57,6 @@
   /* box-shadow: 0 -3px 0 0 red; */
   font-size: 29px;
   font-weight: 300;
-  will-change: transform;
 }
 
 .flashcard__front::before {
@@ -85,8 +80,7 @@
   word-break: break-word;
   /* padding: 25px; */
   box-sizing: border-box;
-  overflow: hidden;
-  will-change: transform;
+  overflow-y: hidden;
 }
 
 .flashcard__fadeout-wrapper {
@@ -123,10 +117,8 @@
     rgba(255, 255, 255, 1) 100%
   );
   opacity: 1;
-  transition: all 0.5s cubic-bezier(0.6, 0, 0.4, 1);
+  transition: all 0.5s;
   -webkit-transform: translate3d(0, 0, 0);
-
-  /* min-height: 0; */
 }
 
 .flashcard--hide-fadeout {
@@ -139,22 +131,17 @@
   justify-content: center;
   width: 228px;
   height: 100%;
-
   opacity: 1;
 }
 
 .flashcard__back--scroll {
   margin: 30px auto 30px auto;
   /* padding: 30px 0 30px 0; */
-
-  /* max-width: 228px;
-  max-height: 228px; */
-
+  width: 228px;
+  height: 228px;
   overflow: scroll;
   box-sizing: border-box;
   opacity: 1;
-  line-height: 31.25px;
-  font-size: 20px;
 }
 
 .flashcard__image {
