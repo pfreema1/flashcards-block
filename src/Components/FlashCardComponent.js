@@ -19,7 +19,10 @@ const FlashCardComponent = ({
               alt="kitty picture"
             />
           ) : (
-            <p>{backText}</p>
+            <div className="foo">
+              <div className="flashcard__fadeout" />
+              <div className="back-text">{backText}</div>
+            </div>
           )}
         </div>
       </div>
