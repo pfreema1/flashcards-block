@@ -1,19 +1,25 @@
 # Flashcards Block
 
-### Installation
+## Installation
 
 Clone -> `npm install` -> `yarn start` -> enjoy! 😄
 
-### Tech Used
+## Tech Used
 
 React
+
 Jest
+
 Enzyme
+
 Coffee ☕️
 
-### Technical Requirements
+## Technical Requirements
 
 ✅ UI should be populated using a JSON data structure.
+
 ✅ Use React for UI components.
+
 ✅ Attention to detail.
+
 ✅ Responsive.
