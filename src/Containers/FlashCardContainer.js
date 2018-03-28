@@ -26,10 +26,16 @@ class FlashCardContainer extends Component {
     }
   }
 
-  handleClick = () => {
+  handleClick = e => {
     this.setState(prevState => {
       if (!prevState.isFlipped && this.backEl) {
         this.backEl.scrollTop = 0;
+      }
+
+      if (typeof e !== 'undefined') {
+        // this keeps the accessibility outline styling from showing
+        // if the user is using a mouse
+        this.wrapperEl.blur();
       }
 
       return { isFlipped: !prevState.isFlipped, isScrolledToBottom: false };
@@ -40,7 +46,6 @@ class FlashCardContainer extends Component {
     if (e.key === 'Enter' || e.key === ' ') {
       this.handleClick();
       this.backEl && this.backEl.focus();
-      // this.backEl.focus();
     }
   };
 
@@ -68,6 +73,7 @@ class FlashCardContainer extends Component {
         backImage={backImage}
         hasScrollBar={hasScrollBar}
         backEl={el => (this.backEl = el)}
+        wrapperEl={el => (this.wrapperEl = el)}
         handleScroll={this.handleScroll}
         isScrolledToBottom={isScrolledToBottom}
         index={index}

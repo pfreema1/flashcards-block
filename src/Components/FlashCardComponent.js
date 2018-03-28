@@ -8,6 +8,7 @@ const FlashCardComponent = ({
   isFlipped,
   hasScrollBar,
   backEl,
+  wrapperEl,
   handleScroll,
   isScrolledToBottom,
   index,
@@ -19,6 +20,7 @@ const FlashCardComponent = ({
       className="flashcard-wrapper"
       tabIndex={index + 1}
       onKeyDown={handleKeyDown}
+      ref={wrapperEl}
     >
       <div className={isFlipped ? 'flipper' : 'unflip'}>
         <div className="flashcard flashcard__front">
