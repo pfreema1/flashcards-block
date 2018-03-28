@@ -23,3 +23,7 @@ Coffee ☕️
 ✅ Attention to detail.
 
 ✅ Responsive.
+
+## Browser Target
+
+Chrome
