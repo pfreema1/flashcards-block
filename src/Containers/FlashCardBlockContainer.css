@@ -8,3 +8,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.flashcard-block__title {
+  margin-left: 75px;
+}

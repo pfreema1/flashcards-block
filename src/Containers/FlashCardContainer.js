@@ -48,7 +48,7 @@ class FlashCardContainer extends Component {
   };
 
   render() {
-    const { front, backText, backImage, isFirst } = this.props;
+    const { front, backText, backImage, index } = this.props;
     const { isFlipped, hasScrollBar, isScrolledToBottom } = this.state;
 
     return (
@@ -62,7 +62,7 @@ class FlashCardContainer extends Component {
         backEl={el => (this.backEl = el)}
         handleScroll={this.handleScroll}
         isScrolledToBottom={isScrolledToBottom}
-        isFirst={isFirst}
+        index={index}
       />
     );
   }
