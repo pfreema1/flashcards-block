@@ -16,15 +16,16 @@ class FlashCardContainer extends Component {
   };
 
   render() {
-    const { front, back } = this.props;
+    const { front, backText, backImage } = this.props;
     const { isFlipped } = this.state;
 
     return (
       <FlashCardComponent
         handleClick={this.handleClick}
         front={front}
-        back={back}
+        backText={backText}
         isFlipped={isFlipped}
+        backImage={backImage}
       />
     );
   }

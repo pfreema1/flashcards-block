@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import FlashCardBlockContainer from './Containers/FlashCardBlockContainer';
 import './App.css';
+import kitty from './images/kitty.png';
 
 const exampleData = {
   vocab: [
     {
-      keyWord: 'foo',
+      keyWord: 'Front of card 1',
+      definition: 'Back of card 1',
+      image: null
+    },
+    {
+      keyWord: 'Front of card 2',
+      definition: null,
+      image: kitty
+    },
+    {
+      keyWord: 'Front of card 3',
       definition:
-        'Rise allows customers to create responsive single page, vertically scrolling lessons which include a variety of modular elements called Blocks. These Blocks can be as simple as text and image layouts, videos, image galleries, to more complex components like interactive flash cards, tabbed modules and accordions.Rise allows customers to create responsive single page, vertically scrolling lessons which include a variety of modular elements called Blocks. These Blocks can be as simple as text and image layouts, videos, image galleries, to more complex components like interactive flash cards, tabbed modules and accordions.Rise allows customers to create responsive single page, vertically scrolling lessons which include a variety of modular elements called Blocks. These Blocks can be as simple as text and image layouts, videos, image galleries, to more complex components like interactive flash cards, tabbed modules and accordions.Rise allows customers to create responsive single page, vertically scrolling lessons which include a variety of modular elements called Blocks. These Blocks can be as simple as text and image layouts, videos, image galleries, to more complex components like interactive flash cards, tabbed modules and accordions.'
-    },
-    {
-      keyWord: 'bar',
-      definition: 'place holder here'
-    },
-    {
-      keyWord: 'baz',
-      definition: 'place holder here'
+        'Café au lait crema so cup est single shot acerbic. Saucer as, black crema organic single origin mocha. Half and half as iced caffeine robusta wings instant. Caramelization brewed con panna, aftertaste, seasonal, froth and, a medium ristretto caramelization caffeine.  Mocha crema, lungo, bar, roast in coffee that latte as grinder latte. Cortado, acerbic, grounds coffee doppio brewed sweet. Id, plunger pot single shot, filter, galão spoon blue mountain aged beans. As whipped et chicory aftertaste java robusta est half and half.',
+      image: null
     }
   ]
 };

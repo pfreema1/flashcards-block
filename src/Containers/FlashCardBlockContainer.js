@@ -20,7 +20,8 @@ class FlashCardBlockContainer extends Component {
           <FlashCardContainer
             key={index}
             front={vocabEl.keyWord}
-            back={vocabEl.definition}
+            backText={vocabEl.definition}
+            backImage={vocabEl.image}
           />
         ))}
       </div>

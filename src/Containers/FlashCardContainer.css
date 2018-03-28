@@ -18,11 +18,11 @@
   max-width: 280px;
   max-height: 280px;
   display: inline-block;
-  margin: 0 0 35px 0;
+  margin: 0 15px 35px 15px;
 }
 
 .flipper {
-  transform: rotateY(180deg) scale(1.1);
+  transform: rotateY(180deg) scale(1.1) translateY(-10px);
   transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
@@ -50,9 +50,40 @@
 .flashcard--front {
   z-index: 2;
   transform: rotateY(0deg);
+  /* border-top: 3px solid #747a7e; */
+  /* box-shadow: 0 -3px 0 0 red; */
+  font-size: 29px;
+  font-weight: 300;
+}
+
+.flashcard--front::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  /* background: #747a7e; */
+  position: absolute;
+  top: 0px;
+  left: 0px;
   border-top: 3px solid #747a7e;
+  /* margin-top: -1px; */
 }
 
 .flashcard--back {
   transform: rotateY(180deg);
+  background: RGBA(250, 250, 250, 1);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 31.25px;
+  word-break: break-word;
+  /* padding: 25px; */
+  box-sizing: border-box;
+}
+
+.flashcard--back p {
+  margin: 25px;
+}
+
+.flashcard__image {
+  width: 100%;
+  height: auto;
 }
