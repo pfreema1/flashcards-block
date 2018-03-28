@@ -9,12 +9,18 @@ const FlashCardComponent = ({
   hasScrollBar,
   backEl,
   handleScroll,
-  isScrolledToBottom
+  isScrolledToBottom,
+  isFirst
 }) => {
   return (
     <div onClick={handleClick} className="flashcard-wrapper">
       <div className={isFlipped ? 'flipper' : 'unflip'}>
-        <div className="flashcard flashcard__front">{front}</div>
+        <div className="flashcard flashcard__front">
+          {front}
+          {isFirst && (
+            <div className="flashcard__ui-instruction">Click to flip</div>
+          )}
+        </div>
         <div className="flashcard flashcard__back">
           {backImage ? (
             <img

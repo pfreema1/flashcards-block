@@ -22,6 +22,7 @@ class FlashCardBlockContainer extends Component {
             front={vocabEl.keyWord}
             backText={vocabEl.definition}
             backImage={vocabEl.image}
+            isFirst={index === 0 ? true : false}
           />
         ))}
       </div>
