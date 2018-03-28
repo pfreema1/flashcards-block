@@ -36,6 +36,13 @@ class FlashCardContainer extends Component {
     });
   };
 
+  handleKeyDown = e => {
+    console.log(e.key);
+    if (e.key === 'Enter' || e.key === ' ') {
+      this.handleClick();
+    }
+  };
+
   handleScroll = () => {
     if (
       this.backEl.scrollTop + this.backEl.offsetHeight ===
@@ -63,6 +70,7 @@ class FlashCardContainer extends Component {
         handleScroll={this.handleScroll}
         isScrolledToBottom={isScrolledToBottom}
         index={index}
+        handleKeyDown={this.handleKeyDown}
       />
     );
   }

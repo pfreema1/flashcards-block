@@ -10,13 +10,17 @@ const FlashCardComponent = ({
   backEl,
   handleScroll,
   isScrolledToBottom,
-  index
+  index,
+  handleKeyDown
 }) => {
   return (
     <div
       onClick={handleClick}
       className="flashcard-wrapper"
       tabIndex={index + 1}
+      // role="button"
+      // aria-pressed={isFlipped}
+      onKeyDown={handleKeyDown}
     >
       <div className={isFlipped ? 'flipper' : 'unflip'}>
         <div className="flashcard flashcard__front">
