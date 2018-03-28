@@ -45,6 +45,7 @@ const FlashCardComponent = ({
                 }
               />
               <div
+                tabIndex="-1"
                 onScroll={handleScroll}
                 ref={backEl}
                 className="flashcard__back--scroll"
