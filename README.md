@@ -2,4 +2,4 @@
 
 ### Installation
 
-Clone -> `npm install` -> `yarn start` -> enjoy!
+Clone -> `npm install` -> `yarn start` -> enjoy! 😄
