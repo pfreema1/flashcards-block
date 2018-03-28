@@ -30,11 +30,17 @@ class FlashCardContainer extends Component {
     this.setState(prevState => {
       if (!prevState.isFlipped && this.backEl) {
         this.backEl.scrollTop = 0;
+
+        if (typeof e !== 'undefined') {
+          // this makes it so the accessibility outline
+          // is visible only when using keyboard
+          this.backEl.blur();
+        }
       }
 
       if (typeof e !== 'undefined') {
-        // this keeps the accessibility outline styling from showing
-        // if the user is using a mouse
+        // this makes it so the accessibility outline
+        // is visible only when using keyboard
         this.wrapperEl.blur();
       }
 
