@@ -8,25 +8,14 @@ class FlashCardContainer extends Component {
 
     this.state = {
       isFlipped: false,
-      hasScrollBar: false
+      hasScrollBar: false,
+      isScrolledToBottom: false
     };
   }
 
   componentDidMount() {
-    // if the element is overflowing (has a scrollbar),
-    // lets setState to conditionally apply styling
-    // if (this.backEl) {
-    //   console.log('this.backEl:  ', this.backEl);
-    //   console.log('scrollHeight:  ', this.backEl.scrollHeight);
-    //   console.log('clientHeight:  ', this.backEl.clientHeight);
-    //   console.log('offsetHeight:  ', this.backEl.offsetHeight);
-    //   console.log('scrollTop:  ', this.backEl.scrollTop);
-    //   console.log(
-    //     'parent clientHeight:  ',
-    //     this.backEl.parentNode.clientHeight
-    //   );
-    // }
-
+    // if the content on the back of the card overflows, lets update
+    // state so we can apply the text fadeout styling
     if (this.backEl) {
       const backElParentClientHeight = this.backEl.parentNode.clientHeight;
       const backElClientHeight = this.backEl.clientHeight;
@@ -35,28 +24,26 @@ class FlashCardContainer extends Component {
         this.setState({ hasScrollBar: true });
       }
     }
-
-    // if (this.backEl && this.backEl.scrollHeight > this.backEl.clientHeight) {
-    //   this.setState({ hasScrollBar: true });
-    // }
   }
 
   handleClick = () => {
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
   };
 
-  checkHeight = el => {
-    // console.log('el:  ', el);
-    // // if the element is overflowing (has a scrollbar),
-    // // lets setState to conditionally apply styling
-    // if (el && el.scrollHeight > el.clientHeight) {
-    //   this.setState({ hasScrollBar: true });
-    // }
+  handleScroll = () => {
+    if (
+      this.backEl.scrollTop + this.backEl.offsetHeight ===
+      this.backEl.scrollHeight
+    ) {
+      this.setState({ isScrolledToBottom: true });
+    } else if (this.state.isScrolledToBottom) {
+      this.setState({ isScrolledToBottom: false });
+    }
   };
 
   render() {
     const { front, backText, backImage } = this.props;
-    const { isFlipped, hasScrollBar } = this.state;
+    const { isFlipped, hasScrollBar, isScrolledToBottom } = this.state;
 
     return (
       <FlashCardComponent
@@ -67,6 +54,8 @@ class FlashCardContainer extends Component {
         backImage={backImage}
         hasScrollBar={hasScrollBar}
         backEl={el => (this.backEl = el)}
+        handleScroll={this.handleScroll}
+        isScrolledToBottom={isScrolledToBottom}
       />
     );
   }
