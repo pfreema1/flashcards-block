@@ -1,4 +1,6 @@
 import kitty from './images/kitty.png';
+import doggo from './images/doggo.png';
+import floof from './images/floof.png';
 
 const exampleData = {
   vocab: [
@@ -8,7 +10,7 @@ const exampleData = {
       image: null
     },
     {
-      keyWord: 'Front of card 2',
+      keyWord: 'meow',
       definition: null,
       image: kitty
     },
@@ -24,24 +26,24 @@ const exampleData = {
       image: null
     },
     {
-      keyWord: 'Front of card 1',
-      definition: 'Back of card 1',
-      image: null
-    },
-    {
-      keyWord: 'Front of card 2',
+      keyWord: 'bork',
       definition: null,
-      image: kitty
+      image: doggo
     },
     {
-      keyWord: 'Front of card 3',
+      keyWord: 'Front of card',
       definition:
         'Café au lait crema so cup est single shot acerbic. Saucer as, black crema organic single origin mocha. Half and half as iced caffeine robusta wings instant. Caramelization brewed con panna, aftertaste, seasonal, froth and, a medium ristretto caramelization caffeine.  Mocha crema, lungo, bar, roast in coffee that latte as grinder latte. Cortado, acerbic, grounds coffee doppio brewed sweet. Id, plunger pot single shot, filter, galão spoon blue mountain aged beans. As whipped et chicory aftertaste java robusta est half and half.',
       image: null
     },
     {
-      keyWord: 'foofoo',
-      definition: 'meowmeowmeow!',
+      keyWord: 'floof',
+      definition: null,
+      image: floof
+    },
+    {
+      keyWord: 'lorem',
+      definition: 'ipsum!',
       image: null
     }
   ]
