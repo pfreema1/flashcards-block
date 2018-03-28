@@ -20,7 +20,7 @@ const FlashCardComponent = ({
             <img
               className="flashcard__image"
               src={backImage}
-              alt="kitty picture"
+              alt="cute kitty"
             />
           ) : hasScrollBar ? (
             <div className="flashcard__fadeout-wrapper">
