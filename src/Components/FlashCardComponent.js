@@ -5,7 +5,9 @@ const FlashCardComponent = ({
   backText,
   backImage,
   handleClick,
-  isFlipped
+  isFlipped,
+  hasScrollBar,
+  backEl
 }) => {
   return (
     <div onClick={handleClick} className="flashcard-wrapper">
@@ -18,10 +20,16 @@ const FlashCardComponent = ({
               src={backImage}
               alt="kitty picture"
             />
-          ) : (
+          ) : hasScrollBar ? (
             <div className="flashcard__fadeout-wrapper">
               <div className="flashcard__fadeout" />
-              <div className="flashcard__back-text">{backText}</div>
+              <div ref={backEl} className="flashcard__back-text">
+                {backText}
+              </div>
+            </div>
+          ) : (
+            <div ref={backEl} className="flashcard__back-text">
+              {backText}
             </div>
           )}
         </div>
