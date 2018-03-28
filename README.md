@@ -1,4 +1,5 @@
-#Flashcards Block
+# Flashcards Block
 
-###Installation
+### Installation
+
 Clone -> `npm install` -> `yarn start` -> enjoy!
