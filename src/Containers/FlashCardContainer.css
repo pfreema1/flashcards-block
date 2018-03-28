@@ -44,7 +44,6 @@
 
 .flashcard__front,
 .flashcard__back {
-  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -55,6 +54,7 @@
 }
 
 .flashcard__front {
+  backface-visibility: hidden;
   z-index: 2;
   transform: rotateY(0deg);
   border-top: none;
