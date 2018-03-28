@@ -27,7 +27,13 @@ class FlashCardContainer extends Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    this.setState(prevState => {
+      if (!prevState.isFlipped && this.backEl) {
+        this.backEl.scrollTop = 0;
+      }
+
+      return { isFlipped: !prevState.isFlipped, isScrolledToBottom: false };
+    });
   };
 
   handleScroll = () => {

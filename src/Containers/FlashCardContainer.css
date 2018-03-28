@@ -22,10 +22,11 @@
 }
 
 .flipper {
-  transform: rotateY(180deg) scale(1.1) translateY(-10px);
+  transform: rotateY(180deg) scale(1.1) translate3d(0, -10px, 0);
   transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
+  opacity: 1;
 }
 
 .unflip {
@@ -33,6 +34,7 @@
   transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
+  opacity: 1;
 }
 
 .flashcard__front,
@@ -94,27 +96,28 @@
   width: 100%;
   pointer-events: none;
   background: -webkit-linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 1) 100%
   );
   background-image: -moz-linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 1) 100%
   );
   background-image: -o-linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 1) 100%
   );
   background-image: linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 1) 100%
   );
   background-image: -ms-linear-gradient(
-    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 1) 100%
   );
   opacity: 1;
   transition: all 0.5s;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .flashcard--hide-fadeout {
@@ -127,6 +130,7 @@
   justify-content: center;
   width: 228px;
   height: 100%;
+  opacity: 1;
 }
 
 .flashcard__back--scroll {
@@ -136,6 +140,7 @@
   height: 228px;
   overflow: scroll;
   box-sizing: border-box;
+  opacity: 1;
 }
 
 .flashcard__image {
