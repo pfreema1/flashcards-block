@@ -1,4 +1,4 @@
-# Flashcards Block
+# Flashcards Block - [demo](http://paulfreeman.design/flashcards-block/)
 
 ## Installation
 
